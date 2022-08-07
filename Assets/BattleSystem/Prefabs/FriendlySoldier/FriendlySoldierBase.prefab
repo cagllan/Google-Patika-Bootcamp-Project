@@ -51,9 +51,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4292208900820829520, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292208900820829520, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6060390973803607915, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
       propertyPath: m_Name
-      value: SoldierBase
+      value: FriendlySoldierBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f43a9e0e41608ca419c977574d82de81, type: 3}

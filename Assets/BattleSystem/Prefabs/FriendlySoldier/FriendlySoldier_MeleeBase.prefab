@@ -51,9 +51,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3958696226256297344, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958696226256297344, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6447524109056323515, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
       propertyPath: m_Name
-      value: FriendlySoldierBase
+      value: FriendlySoldier_MeleeBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
+--- !u!1 &524234364343779280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447524109056323515, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
+  m_PrefabInstance: {fileID: 6790374236739522667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1075902042949896553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524234364343779280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b209b563284b7488a4ea74c60e3b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10

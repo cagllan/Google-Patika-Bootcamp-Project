@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySoldier_MeleeBase
       objectReference: {fileID: 0}
+    - target: {fileID: 4799580434915228800, guid: ecd228b549339d8468838d732e4c3f39, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799580434915228800, guid: ecd228b549339d8468838d732e4c3f39, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8224534280161495569, guid: ecd228b549339d8468838d732e4c3f39, type: 3}
       propertyPath: m_RootOrder
       value: 0
