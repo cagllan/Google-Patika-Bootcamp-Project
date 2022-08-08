@@ -25,7 +25,6 @@ public class Damagable : MonoBehaviour
                 
                 if(IsDead)
                 {                    
-                    Debug.Log(gameObject.name + "Karakter öldü");
                     OnTookDamage?.Invoke(this);
                     OnDied?.Invoke(this);                    
                     return;

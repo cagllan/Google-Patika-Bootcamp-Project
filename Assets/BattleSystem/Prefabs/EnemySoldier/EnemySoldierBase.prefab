@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 88951429530418843, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
+      propertyPath: _targetSoldierType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 803927592384590785, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
       propertyPath: m_RootOrder
       value: 0

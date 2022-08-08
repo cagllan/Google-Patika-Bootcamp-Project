@@ -63,5 +63,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: FriendlySoldierBase
       objectReference: {fileID: 0}
+    - target: {fileID: 8899031543194334339, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
+      propertyPath: _soldierType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f43a9e0e41608ca419c977574d82de81, type: 3}
