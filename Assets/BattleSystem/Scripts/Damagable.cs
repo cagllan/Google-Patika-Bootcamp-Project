@@ -6,7 +6,7 @@ public class Damagable : MonoBehaviour
     [SerializeField] private float _health;
 
     public float Health {get => _health; private set {_health = value;}}
-    public bool IsDead {get; private set;}
+    public bool IsDead { get; private set; }
 
     // Event
     public Action<Damagable> OnTookDamage {get;set;}

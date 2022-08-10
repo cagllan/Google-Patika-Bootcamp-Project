@@ -21,10 +21,11 @@ public class SoldierStateManager : MonoBehaviour
 
         _soldierTargetProvider.OnNoTargetSoldierFound += OnNoTargetSoldierFound;
         _soldierMoveState.OnReached += OnReachedTarget;
-        _damagable.OnDied += OnDied;
         _damagable.OnDied += OnSoldierDied;
 
         TeamVictoryControl.Instance.OnSoldierTeamWon += OnSoldierVictory;
+
+        BattleStartController.Instance.OnStartBattle += OnStartBattle;
     }   
 
     private void Start() 
@@ -32,28 +33,27 @@ public class SoldierStateManager : MonoBehaviour
         _soldierTargetProvider.OnSoldierUpdated += OnSoldierUpdated;
     }
 
-
-    private void Update() 
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ChangeState(_soldierMoveState);
-        }
-    }
-
     private void OnDestroy() 
     {
         _soldierTargetProvider.OnNoTargetSoldierFound -= OnNoTargetSoldierFound;
         _soldierMoveState.OnReached -= OnReachedTarget;
-        _damagable.OnDied -= OnDied;
         _soldierTargetProvider.OnSoldierUpdated -= OnSoldierUpdated;
 
         _damagable.OnDied -= OnSoldierDied;
 
-        if(TeamVictoryControl.Instance != null)
+        if (BattleStartController.Instance != null ) BattleStartController.Instance.OnStartBattle -= OnStartBattle;
+
+        if (TeamVictoryControl.Instance != null)
         {
             TeamVictoryControl.Instance.OnSoldierTeamWon -= OnSoldierVictory;
         }
+    }
+
+    
+    private void OnStartBattle()
+    {
+        _soldierTargetProvider.UpdateTargetSoldier();
+        ChangeState(_soldierMoveState);
     }
 
     private void ChangeState(SoldierBaseState state)
@@ -73,13 +73,10 @@ public class SoldierStateManager : MonoBehaviour
          ChangeState(_soldierAttackState);
     }
 
-    private void OnDied(Damagable damagable)
-    {
-        ChangeState(_soldierDiedState);
-    }
 
     private void OnSoldierUpdated(Soldier soldier)
     {
+        
         ChangeState(_soldierMoveState);
     }
 
@@ -87,8 +84,10 @@ public class SoldierStateManager : MonoBehaviour
     {
         _soldierTargetProvider.OnNoTargetSoldierFound -= OnNoTargetSoldierFound;
         _soldierMoveState.OnReached -= OnReachedTarget;
-        _damagable.OnDied -= OnDied;
+        _damagable.OnDied -= OnSoldierDied;
         _soldierTargetProvider.OnSoldierUpdated -= OnSoldierUpdated;
+
+        ChangeState(_soldierDiedState);
     }
 
     private void OnSoldierVictory(ESoldierTeam soldierTeam)

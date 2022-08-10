@@ -53,6 +53,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.GetComponent<Soldier>() == null) return;
+
         if(other.gameObject.GetComponent<Soldier>().SoldierType == _targetSoldierType)
         {
             gameObject.GetComponent<DamageDealer>().DealDamage(other.gameObject.GetComponent<Damagable>());

@@ -24,18 +24,24 @@ public class TeamVictoryControl : MonoBehaviour
 
     private void Start() 
     {
+        BattleStartController.Instance.OnStartBattle += OnBattleStarted;
+    }
+
+
+    public void OnBattleStarted()
+    {
         _enemies = SoldierProvider.Instance.GetSoldiersBySoldierType(ESoldierTeam.Enemy, true);
 
-        foreach(Soldier enemy in _enemies)
+        foreach (Soldier enemy in _enemies)
         {
-            enemy.GetComponent<Damagable>().OnDied += OnEnemyDied; 
+            enemy.GetComponent<Damagable>().OnDied += OnEnemyDied;
         }
 
         _friendlies = SoldierProvider.Instance.GetSoldiersBySoldierType(ESoldierTeam.Friendly, true);
 
-        foreach(Soldier friendly in _friendlies)
+        foreach (Soldier friendly in _friendlies)
         {
-            friendly.GetComponent<Damagable>().OnDied += OnFriendlyDied; 
+            friendly.GetComponent<Damagable>().OnDied += OnFriendlyDied;
         }
     }
 
@@ -56,6 +62,8 @@ public class TeamVictoryControl : MonoBehaviour
                 friendly.GetComponent<Damagable>().OnDied -= OnFriendlyDied;
             }            
         }
+
+        if(BattleStartController.Instance != null) BattleStartController.Instance.OnStartBattle -= OnBattleStarted;
     }
 
 
@@ -64,7 +72,8 @@ public class TeamVictoryControl : MonoBehaviour
         int friendlyCount = SoldierProvider.Instance.GetSoldiersBySoldierType(ESoldierTeam.Friendly, true).Count;
 
         if(friendlyCount <= 0)
-        { 
+        {
+            Debug.Log("Enemy Kazandi");
             OnSoldierTeamWon?.Invoke(ESoldierTeam.Enemy);
         }
     }
@@ -74,7 +83,8 @@ public class TeamVictoryControl : MonoBehaviour
         int enemyCount = SoldierProvider.Instance.GetSoldiersBySoldierType(ESoldierTeam.Enemy, true).Count;
 
         if(enemyCount <= 0)
-        { 
+        {
+            Debug.Log("Friendly Kazandi");
             OnSoldierTeamWon?.Invoke(ESoldierTeam.Friendly);
         }
     }

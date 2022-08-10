@@ -7,27 +7,18 @@ public class SoldierTargetProvider_ClosestAliveEnemy : SoldierTargetProviderBase
     [SerializeField] private ESoldierTeam _targetSoldierType;
     [SerializeField] private Soldier _mySoldier = null;
 
-    private Soldier _selectedTargetSoldier = null;   
-    private bool isInited = false;
+    private Soldier _selectedTargetSoldier = null;
 
     public override Action<Soldier> OnSoldierUpdated { get; set;}
     public override Action OnNoTargetSoldierFound { get; set; }
 
-    private void Awake() 
-    {
-        if(isInited) return ;
-        UpdateTargetSoldier();
-    }
-
     public override Soldier GetTargetSoldier()
     {   
-        if(!isInited) UpdateTargetSoldier();
-
         return _selectedTargetSoldier;
     }
     
 
-    private void UpdateTargetSoldier()
+    public override void UpdateTargetSoldier()
     {
         Soldier targetSoldier;
 
@@ -57,8 +48,7 @@ public class SoldierTargetProvider_ClosestAliveEnemy : SoldierTargetProviderBase
         Soldier previousSoldier = _selectedTargetSoldier;
 
         _selectedTargetSoldier = targetSoldier;
-
-        isInited = true;        
+       
 
         if (_selectedTargetSoldier == null) return;
 
