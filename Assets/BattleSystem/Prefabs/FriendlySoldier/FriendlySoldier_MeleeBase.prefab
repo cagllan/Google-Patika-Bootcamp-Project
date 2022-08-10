@@ -12,6 +12,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4604828289428071499}
     - target: {fileID: 554066757398943190, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _soldierAttackState
+      value: 
+      objectReference: {fileID: 9175988388644108787}
+    - target: {fileID: 554066757398943190, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
       propertyPath: _soldierTargetProvider
       value: 
       objectReference: {fileID: 5935926560830993952}
@@ -59,14 +63,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4278442242843984137, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
-      propertyPath: _mySoldier
-      value: 
-      objectReference: {fileID: 1075902042949896553}
-    - target: {fileID: 4278442242843984137, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
-      propertyPath: _soldierTargetProvider
-      value: 
-      objectReference: {fileID: 5935926560830993952}
     - target: {fileID: 5416545078018973914, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
       propertyPath: _nMeshAgent
       value: 
@@ -75,12 +71,31 @@ PrefabInstance:
       propertyPath: _closestAliveEnemy
       value: 
       objectReference: {fileID: 5935926560830993952}
+    - target: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _mySoldier
+      value: 
+      objectReference: {fileID: 1075902042949896553}
+    - target: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _soldierTargetProvider
+      value: 
+      objectReference: {fileID: 5935926560830993952}
     - target: {fileID: 7793353299141941164, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
       propertyPath: m_Name
       value: MeleeStateManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+--- !u!114 &9175988388644108787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+  m_PrefabInstance: {fileID: 3086382623934150179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cff413fa77dd645a1d603748a10982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6790374236739522667
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8899031543194334339}
   - component: {fileID: 7834860330953534704}
   - component: {fileID: 88951429530418843}
+  - component: {fileID: 2701667412780734973}
   m_Layer: 0
   m_Name: SoldierBase
   m_TagString: Untagged
@@ -264,6 +265,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetSoldierType: 0
   _mySoldier: {fileID: 8899031543194334339}
+--- !u!136 &2701667412780734973
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060390973803607915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.944255
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97212756, z: 0}
 --- !u!1 &7384909154225590193
 GameObject:
   m_ObjectHideFlags: 0

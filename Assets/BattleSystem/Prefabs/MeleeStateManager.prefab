@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 554066757398943190}
   - component: {fileID: 3120617208751396976}
   - component: {fileID: 5416545078018973914}
-  - component: {fileID: 4278442242843984137}
   - component: {fileID: 3206169987997388600}
   - component: {fileID: 4856543729902869542}
+  - component: {fileID: 6161663670284046288}
   m_Layer: 0
   m_Name: MeleeStateManager
   m_TagString: Untagged
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soldierIdleState: {fileID: 3120617208751396976}
   _soldierMoveState: {fileID: 5416545078018973914}
-  _soldierAttackState: {fileID: 4278442242843984137}
+  _soldierAttackState: {fileID: 0}
   _soldierDiedState: {fileID: 3206169987997388600}
   _soldierVictoryState: {fileID: 4856543729902869542}
   _damagable: {fileID: 0}
@@ -68,6 +68,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e369d6757b528184ab830cbdffd6cdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _idle: Idle
+  _fixedTransationDuration: 0.1
 --- !u!114 &5416545078018973914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,23 +90,6 @@ MonoBehaviour:
   _enemyTransform: {fileID: 0}
   _reachDistance: 2
   _closestAliveEnemy: {fileID: 0}
---- !u!114 &4278442242843984137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7793353299141941164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21a6b58155ce38438dbf302bc177528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _attack: Attack
-  _fixedTransationDuration: 0.1
-  _soldierTargetProvider: {fileID: 0}
-  _mySoldier: {fileID: 0}
 --- !u!114 &3206169987997388600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +120,20 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _victory: Victory
   _fixedTransationDuration: 0.1
+--- !u!114 &6161663670284046288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793353299141941164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cff413fa77dd645a1d603748a10982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _attack: Attack
+  _fixedTransationDuration: 0.1
+  _soldierTargetProvider: {fileID: 0}
+  _mySoldier: {fileID: 0}

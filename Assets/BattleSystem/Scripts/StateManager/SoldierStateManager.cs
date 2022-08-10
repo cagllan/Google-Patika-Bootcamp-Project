@@ -1,16 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoldierStateManager : MonoBehaviour
 {
     [SerializeField] private SoldierIdleState _soldierIdleState = null;
     [SerializeField] private SoldierMoveState _soldierMoveState = null;
-    [SerializeField] private SoldierAttackState _soldierAttackState = null;
+    [SerializeField] private SoldierAttackBaseState _soldierAttackState = null;
     [SerializeField] private SoldierDiedState _soldierDiedState = null;
     [SerializeField] private SoldierVictoryState _soldierVictoryState = null;
 
     [SerializeField] private Damagable _damagable;
     [SerializeField] private SoldierTargetProviderBase _soldierTargetProvider = null;
-    
 
     private SoldierBaseState _currentState;
 

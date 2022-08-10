@@ -127,6 +127,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1560149324980072667}
     - target: {fileID: 554066757398943190, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _soldierAttackState
+      value: 
+      objectReference: {fileID: 850978735433412817}
+    - target: {fileID: 554066757398943190, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
       propertyPath: _soldierTargetProvider
       value: 
       objectReference: {fileID: 8656416170995622576}
@@ -190,9 +194,28 @@ PrefabInstance:
       propertyPath: _closestAliveEnemy
       value: 
       objectReference: {fileID: 8656416170995622576}
+    - target: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _mySoldier
+      value: 
+      objectReference: {fileID: 7552992037617511026}
+    - target: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+      propertyPath: _soldierTargetProvider
+      value: 
+      objectReference: {fileID: 8656416170995622576}
     - target: {fileID: 7793353299141941164, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
       propertyPath: m_Name
       value: MeleeStateManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+--- !u!114 &850978735433412817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6161663670284046288, guid: 5791cc8f6a1ad8c4b8fdd40380145cb1, type: 3}
+  m_PrefabInstance: {fileID: 6795343396587093761}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cff413fa77dd645a1d603748a10982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

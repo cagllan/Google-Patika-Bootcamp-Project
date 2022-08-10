@@ -19,6 +19,11 @@ public class SoldierMoveState : SoldierBaseState
     // Event
     public Action OnReached{get;set;}
 
+    private void Awake() 
+    {
+        _nMeshAgent.stoppingDistance = _reachDistance;
+    }
+
     public override void Enter()
     {
         _animator.CrossFadeInFixedTime(_move, _fixedTransationDuration);
