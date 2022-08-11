@@ -14,6 +14,7 @@ public class Drag : MonoBehaviour
     [SerializeField] GameObject[] slots;
     [SerializeField] float[] distances;
     [SerializeField] int nearestDistanceElement;
+    [SerializeField] GameObject upgradedPrefab;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class Drag : MonoBehaviour
         float disZ = Input.mousePosition.z - posZ;
         Vector3 lastPos = Camera.main.ScreenToWorldPoint(new Vector3(disX, disY, disZ));
         transform.position = new Vector3(lastPos.x, startPos.y, lastPos.z);
-        
+
     }
 
     private void OnMouseUp()
@@ -45,15 +46,27 @@ public class Drag : MonoBehaviour
             distances[i] = Vector3.Distance(slots[i].transform.position, transform.position);
         }
 
-        nearestDistanceElement = Array.IndexOf(distances,distances.Min());
+        nearestDistanceElement = Array.IndexOf(distances, distances.Min());
         if (slots[nearestDistanceElement].transform.childCount == 0)
         {
             transform.position = slots[nearestDistanceElement].transform.position;
             transform.parent = slots[nearestDistanceElement].transform;
         }
         else
-        {            
-                transform.position = transform.parent.position;            
-        }       
+        {
+            if (slots[nearestDistanceElement].transform.GetChild(0).tag == gameObject.tag && slots[nearestDistanceElement].transform != transform.parent && upgradedPrefab != null)
+            {
+                Destroy(slots[nearestDistanceElement].transform.GetChild(0).gameObject);
+                Destroy(gameObject);
+                var upgradedInst = Instantiate(upgradedPrefab, slots[nearestDistanceElement].transform.position, Quaternion.identity);
+                upgradedInst.transform.parent = slots[nearestDistanceElement].transform;
+            }
+            else
+            {
+                transform.position = transform.parent.position;
+            }
+
+        }
+
     }
 }
