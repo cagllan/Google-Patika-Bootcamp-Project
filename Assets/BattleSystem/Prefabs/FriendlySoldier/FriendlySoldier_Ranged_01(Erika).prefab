@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FriendlySoldier_Ranged_01(Erika)
       objectReference: {fileID: 0}
+    - target: {fileID: 524234364343779280, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
+      propertyPath: m_TagString
+      value: Rook
+      objectReference: {fileID: 0}
     - target: {fileID: 1462794274812178292, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
       propertyPath: _animator
       value: 
@@ -105,6 +109,59 @@ PrefabInstance:
       objectReference: {fileID: 3795579190570488685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
+--- !u!1 &411036384826769213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 524234364343779280, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
+  m_PrefabInstance: {fileID: 212301446545096941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2422947800198755031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411036384826769213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5823b0ad506b38d4e95e9903a8fa2bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: []
+  distances:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  nearestDistanceElement: 0
+  upgradedPrefab: {fileID: 3155137994949749366, guid: 0e3490fc829c2ed4688bc88e6029df6a, type: 3}
 --- !u!114 &5228650952061737390 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5367685324060924227, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
