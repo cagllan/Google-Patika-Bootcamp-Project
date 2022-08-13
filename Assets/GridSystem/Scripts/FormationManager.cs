@@ -25,6 +25,7 @@ public class FormationManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
+
     public void SaveFormation()
     {
 
@@ -37,10 +38,14 @@ public class FormationManager : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < occupiedSlotNames.Count; i++)
+
+        /*for (int i = 0; i < occupiedSlotNames.Count; i++)
         {
-            Debug.Log(instantiatedPrefabTags[i] +" at "+ occupiedSlotNames[i]);
-        }
+            PlayerPrefs.SetString(occupiedSlotNames[i],occupiedSlotNames[i]);
+            PlayerPrefs.SetString(instantiatedPrefabTags[i], instantiatedPrefabTags[i]);
+
+        }*/
+     
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
@@ -54,7 +59,7 @@ public class FormationManager : MonoBehaviour
         {
             for (int i = 0; i < occupiedSlotNames.Count; i++)
             {
-                if (slot.name==occupiedSlotNames[i])
+                if (slot.name== occupiedSlotNames[i])
                 {
                     newOccupiedSlots.Add(slot.transform);
                 }
