@@ -20,6 +20,8 @@ public class TeamVictoryControl : MonoBehaviour
     private List<Soldier> _enemies;
     private List<Soldier> _friendlies;
 
+
+
     public Action<ESoldierTeam> OnSoldierTeamWon {get; set;}
 
     private void Start() 
@@ -47,6 +49,8 @@ public class TeamVictoryControl : MonoBehaviour
 
     private void OnDestroy() 
     {
+        if(_enemies == null ||  _friendlies == null) return ;
+
         foreach(Soldier enemy in _enemies)
         {
             if(enemy != null)
