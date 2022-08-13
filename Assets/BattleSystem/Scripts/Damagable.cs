@@ -27,14 +27,19 @@ public class Damagable : MonoBehaviour
                 
                 if(IsDead)
                 {            
-                    _hitParticle.Play();        
+                    PlayHitParticle();        
                     OnTookDamage?.Invoke(this);
                     OnDied?.Invoke(this);                    
                     return;
                 }          
             }
-            _hitParticle.Play();            
+            PlayHitParticle();   
             OnTookDamage?.Invoke(this);
+    }
+
+    private void PlayHitParticle()
+    {
+        _hitParticle.Play();
     }
 
 }
