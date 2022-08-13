@@ -2578,6 +2578,10 @@ MonoBehaviour:
   - {fileID: 2048581792}
   availableSlots: []
   smokeParticle: {fileID: 265766274217486953, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
+  price: 50
+  pawnButton: {fileID: 437883487}
+  rookButton: {fileID: 1860266236}
+  shopPanel: {fileID: 345727361}
   selectedSlot: {fileID: 0}
 --- !u!4 &1418864493 stripped
 Transform:

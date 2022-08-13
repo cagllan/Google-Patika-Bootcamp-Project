@@ -1,31 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridSystem : MonoBehaviour
 {
     [SerializeField] Transform[] slots;
     [SerializeField] List<Transform> availableSlots;
     [SerializeField] ParticleSystem smokeParticle;
+    [SerializeField] int price=50;
+    [SerializeField] Button pawnButton;
+    [SerializeField] Button rookButton;
+    [SerializeField] GameObject shopPanel;
+
     public Transform selectedSlot;
     private Vector3 instPos;
     
     public void SpawnPrefab(GameObject prefab)
     {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (slots[i].transform.childCount==0)
-            {
-                availableSlots.Add(slots[i]);
-            }
-        }
+        var coinAmount=PlayerPrefs.GetInt("Coin");
 
-        selectedSlot = availableSlots[Random.Range(0, availableSlots.Count)];
-        instPos = selectedSlot.position;
-        StartCoroutine(SmokeParticle(instPos));
-        var prefabInst = Instantiate(prefab, instPos, Quaternion.identity);
-        prefabInst.transform.parent = selectedSlot.transform;
-        availableSlots.Clear();
+        if (coinAmount>=price)
+        {
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (slots[i].transform.childCount == 0)
+                {
+                    availableSlots.Add(slots[i]);
+                }
+            }
+
+            selectedSlot = availableSlots[Random.Range(0, availableSlots.Count)];
+            instPos = selectedSlot.position;
+            StartCoroutine(SmokeParticle(instPos));
+            var prefabInst = Instantiate(prefab, instPos, Quaternion.identity);
+            prefabInst.transform.parent = selectedSlot.transform;
+            availableSlots.Clear();
+            CoinController.Instance.DecreaseAmountOfCoin(price);
+        }
+       
     }
 
     IEnumerator SmokeParticle(Vector3 pos)
@@ -33,6 +46,19 @@ public class GridSystem : MonoBehaviour
         var smokeInst = Instantiate(smokeParticle, pos, Quaternion.identity);
         yield return new WaitForSeconds(0.75f);
         Destroy(smokeInst.gameObject);
+    }
+
+    private void Update()
+    {
+        if (shopPanel.activeInHierarchy)
+        {
+            var coins = PlayerPrefs.GetInt("Coin");
+            if (coins<price)
+            {
+                pawnButton.interactable = false;
+                rookButton.interactable = false;
+            }
+        }
     }
 
 }
