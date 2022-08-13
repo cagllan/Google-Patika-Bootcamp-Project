@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563551253114310763, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1275957035476039466, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}
       propertyPath: _animator
@@ -158,6 +158,7 @@ MonoBehaviour:
   - 0
   nearestDistanceElement: 0
   upgradedPrefab: {fileID: 3155137994949749366, guid: 047e721c02b69614eaca763e2f3c4dab, type: 3}
+  fightPanel: {fileID: 0}
 --- !u!114 &4477859490486424181 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4604828289428071499, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}

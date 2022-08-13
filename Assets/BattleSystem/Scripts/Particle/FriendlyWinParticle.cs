@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FriendlyWinParticle : MonoBehaviour
 {
-    [SerializeField] ParticleSystem _friendlyWinParticle = null;
+    [SerializeField] private ParticleSystem _friendlyWinParticle = null;
 
     private void Awake() 
     {
