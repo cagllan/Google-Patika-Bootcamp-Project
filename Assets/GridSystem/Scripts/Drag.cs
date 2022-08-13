@@ -15,10 +15,12 @@ public class Drag : MonoBehaviour
     [SerializeField] float[] distances;
     [SerializeField] int nearestDistanceElement;
     [SerializeField] GameObject upgradedPrefab;
+    [SerializeField] Transform fightPanel;
 
     private void Awake()
     {
         slots = GameObject.FindGameObjectsWithTag("Slot");
+        fightPanel = GameObject.Find("Canvas").transform.GetChild(0);
     }
     void OnMouseDown()
     {
@@ -54,7 +56,7 @@ public class Drag : MonoBehaviour
         }
         else
         {
-            if (slots[nearestDistanceElement].transform.GetChild(0).tag == gameObject.tag && slots[nearestDistanceElement].transform != transform.parent && upgradedPrefab != null)
+            if (slots[nearestDistanceElement].transform.GetChild(0).tag == gameObject.tag && slots[nearestDistanceElement].transform != transform.parent && upgradedPrefab != null&&!fightPanel.gameObject.activeInHierarchy)
             {
                 Destroy(slots[nearestDistanceElement].transform.GetChild(0).gameObject);
                 Destroy(gameObject);

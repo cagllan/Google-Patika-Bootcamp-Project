@@ -19,6 +19,7 @@ public class BattleStartUI : MonoBehaviour
     {
         SetBattleStartUIVisibilty(false);
         BattleStartController.Instance.StartBattle();
+        
     }
 
     private void OnDestroy()
