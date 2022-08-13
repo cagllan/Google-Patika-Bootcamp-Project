@@ -988,6 +988,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fightPanel: {fileID: 2143370030}
   _fightButton: {fileID: 511938807}
+  slots:
+  - {fileID: 801088513}
+  - {fileID: 655736828}
+  - {fileID: 1896598210}
+  - {fileID: 713993626}
+  - {fileID: 1486762835}
+  - {fileID: 140789229}
+  - {fileID: 2104035465}
+  - {fileID: 236953536}
+  - {fileID: 1493251456}
+  - {fileID: 753607284}
+  - {fileID: 106867560}
+  - {fileID: 436840457}
+  - {fileID: 1861451149}
+  - {fileID: 1693044442}
+  - {fileID: 1003807718}
+  - {fileID: 87963149}
+  - {fileID: 301278900}
+  - {fileID: 1161653187}
+  - {fileID: 901493541}
+  - {fileID: 1966491808}
+  - {fileID: 1964257568}
+  - {fileID: 2071027962}
+  - {fileID: 541855782}
+  - {fileID: 1867382248}
+  - {fileID: 469916990}
+  - {fileID: 1513106120}
+  - {fileID: 998151702}
+  - {fileID: 1644308438}
+  - {fileID: 1337014437}
+  - {fileID: 860511402}
+  - {fileID: 1944410137}
+  - {fileID: 2048581792}
 --- !u!1 &541855781
 GameObject:
   m_ObjectHideFlags: 0
