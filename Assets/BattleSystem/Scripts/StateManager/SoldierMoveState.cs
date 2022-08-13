@@ -26,6 +26,9 @@ public class SoldierMoveState : SoldierBaseState
 
     public override void Enter()
     {
+        
+        if(_closestAliveEnemy.GetTargetSoldier() == null) return;
+        
         _animator.CrossFadeInFixedTime(_move, _fixedTransationDuration);
 
         _enemyTransform = _closestAliveEnemy.GetTargetSoldier().transform;
