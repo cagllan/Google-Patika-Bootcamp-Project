@@ -56,7 +56,7 @@ public class Drag : MonoBehaviour
         }
         else
         {
-            if (slots[nearestDistanceElement].transform.GetChild(0).tag == gameObject.tag && slots[nearestDistanceElement].transform != transform.parent && upgradedPrefab != null) //&&!fightPanel.gameObject.activeInHierarchy)
+            if (slots[nearestDistanceElement].transform.GetChild(0).tag == gameObject.tag && slots[nearestDistanceElement].transform != transform.parent && upgradedPrefab != null&&!fightPanel.gameObject.activeInHierarchy)
             {
                 Destroy(slots[nearestDistanceElement].transform.GetChild(0).gameObject);
                 Destroy(gameObject);

@@ -48,8 +48,6 @@ public class FormationManager : MonoBehaviour
 
         PlayerPrefs.SetInt("OccupiedSlotLength", occupiedSlotNames.Count);
 
-
-        sceneManager.LoadNextLevel();
         
     }
 
