@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Damagable : MonoBehaviour
 {
+    
+    [SerializeField] private ParticleSystem _hitParticle = null;
     [SerializeField] private float _health;
 
     public float Health {get => _health; private set {_health = value;}}
@@ -11,7 +13,7 @@ public class Damagable : MonoBehaviour
     // Event
     public Action<Damagable> OnTookDamage {get;set;}
     public Action<Damagable> OnDied {get;set;}
-    
+
     public void TakeDamage(float damageAmount)
     {       
             if(IsDead) return;
@@ -24,14 +26,20 @@ public class Damagable : MonoBehaviour
                 IsDead = true;                
                 
                 if(IsDead)
-                {                    
+                {            
+                    PlayHitParticle();        
                     OnTookDamage?.Invoke(this);
                     OnDied?.Invoke(this);                    
                     return;
                 }          
             }
-                           
+            PlayHitParticle();   
             OnTookDamage?.Invoke(this);
+    }
+
+    private void PlayHitParticle()
+    {
+        _hitParticle.Play();
     }
 
 }
