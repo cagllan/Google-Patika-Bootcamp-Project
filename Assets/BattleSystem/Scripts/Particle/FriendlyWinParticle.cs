@@ -1,8 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class FriendlyWinParticle : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _friendlyWinParticle = null;
+    private IEnumerator _winParticleRoutine;
+
+    
 
     private void Awake() 
     {
@@ -11,6 +15,7 @@ public class FriendlyWinParticle : MonoBehaviour
 
     private void OnDestroy() 
     {
+        StopWinParticleRoutine();
         if(TeamVictoryControl.Instance != null) TeamVictoryControl.Instance.OnSoldierTeamWon -= OnSoldierTeamWon;
     }
 
@@ -18,7 +23,7 @@ public class FriendlyWinParticle : MonoBehaviour
     {
         if(soldierTeam == ESoldierTeam.Friendly)
         {
-            StartParticle();
+            StartWinParticleRoutine();
         }
     }
 
@@ -26,4 +31,29 @@ public class FriendlyWinParticle : MonoBehaviour
     {
         _friendlyWinParticle.Play();        
     }
+
+    private IEnumerator WinParticleProgress()
+    {
+        yield return new WaitForSeconds(1);
+        StartParticle();
+    }
+
+
+    private void StartWinParticleRoutine()
+    {
+        StopWinParticleRoutine();
+
+        _winParticleRoutine = WinParticleProgress();
+        StartCoroutine(_winParticleRoutine);
+    }
+
+    private void StopWinParticleRoutine()
+    {
+        if(_winParticleRoutine != null)
+        {
+            StopCoroutine(_winParticleRoutine);
+        }
+    }
+
+    
 }

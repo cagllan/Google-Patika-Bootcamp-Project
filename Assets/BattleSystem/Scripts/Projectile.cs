@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private IEnumerator _destroyMe;
+    private IEnumerator _destroyMeRoutine;
     [SerializeReference] ESoldierTeam _targetSoldierType;
     
     void Start()
@@ -12,37 +11,33 @@ public class Projectile : MonoBehaviour
         StartDestroyMeRoutine();
     }
 
-    // Update is called once per frame
+    
     void Update()
-    {
-        
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.forward, 5f * Time.deltaTime);
-       
+    {        
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.forward, 5f * Time.deltaTime);       
     }
 
     private void StartDestroyMeRoutine()
     {
         StopDestroyMeRoutine();
 
-        _destroyMe = DestroyMeProgress();
-        StartCoroutine(_destroyMe);
+        _destroyMeRoutine = DestroyMeProgress();
+        StartCoroutine(_destroyMeRoutine);
 
     }
 
     private void StopDestroyMeRoutine()
     {
-        if (_destroyMe != null)
+        if (_destroyMeRoutine != null)
         {
-            StopCoroutine(_destroyMe);
+            StopCoroutine(_destroyMeRoutine);
         }
     }
 
     private IEnumerator DestroyMeProgress()
     {
-
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
-
     }
 
     private void OnDestroy()
