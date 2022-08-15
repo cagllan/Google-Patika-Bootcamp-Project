@@ -17,6 +17,7 @@ public class FormationManager : MonoBehaviour
     [SerializeField] GameObject rookPrefab;
     [SerializeField] GameObject queenPrefab;
     [SerializeField] GameObject kingPrefab;
+    public SceneManagerScript sceneManager;
 
 
 
@@ -39,15 +40,16 @@ public class FormationManager : MonoBehaviour
         }
 
 
-        /*for (int i = 0; i < occupiedSlotNames.Count; i++)
+        for (int i = 0; i < occupiedSlotNames.Count; i++)
         {
-            PlayerPrefs.SetString(occupiedSlotNames[i],occupiedSlotNames[i]);
-            PlayerPrefs.SetString(instantiatedPrefabTags[i], instantiatedPrefabTags[i]);
+            PlayerPrefs.SetString("Slot"+i,occupiedSlotNames[i]);
+            PlayerPrefs.SetString("Tag"+i, instantiatedPrefabTags[i]);
+        }
 
-        }*/
-     
+        PlayerPrefs.SetInt("OccupiedSlotLength", occupiedSlotNames.Count);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        sceneManager.LoadNextLevel();
         
     }
 
@@ -57,9 +59,9 @@ public class FormationManager : MonoBehaviour
 
         foreach (var slot in slots)
         {
-            for (int i = 0; i < occupiedSlotNames.Count; i++)
+            for (int i = 0; i < PlayerPrefs.GetInt("OccupiedSlotLength", 0); i++)
             {
-                if (slot.name== occupiedSlotNames[i])
+                if (slot.name== PlayerPrefs.GetString("Slot"+i,""))
                 {
                     newOccupiedSlots.Add(slot.transform);
                 }
@@ -68,27 +70,27 @@ public class FormationManager : MonoBehaviour
 
         for (int j = 0; j < newOccupiedSlots.Count; j++)
         {
-            if (instantiatedPrefabTags[j] == "Pawn")
+            if (PlayerPrefs.GetString("Tag"+j,"") == "Pawn")
             {
                 SpawnPrefab(j,pawnPrefab);
             }
-            else if (instantiatedPrefabTags[j] == "Bishop")
+            else if (PlayerPrefs.GetString("Tag" + j, "") == "Bishop")
             {
                 SpawnPrefab(j, bishopPrefab);
             }
-            else if (instantiatedPrefabTags[j] == "Knight")
+            else if (PlayerPrefs.GetString("Tag" + j, "") == "Knight")
             {
                 SpawnPrefab(j, knightPrefab);
             }
-            else if (instantiatedPrefabTags[j] == "Rook")
+            else if (PlayerPrefs.GetString("Tag" + j, "") == "Rook")
             {
                 SpawnPrefab(j, rookPrefab);
             }
-            else if (instantiatedPrefabTags[j] == "Queen")
+            else if (PlayerPrefs.GetString("Tag" + j, "") == "Queen")
             {
                 SpawnPrefab(j, queenPrefab);
             }
-            else if (instantiatedPrefabTags[j] == "King")
+            else if (PlayerPrefs.GetString("Tag" + j, "") == "King")
             {
                 SpawnPrefab(j, kingPrefab);
             }
