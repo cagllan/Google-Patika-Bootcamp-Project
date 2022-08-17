@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58117de89f70a874f861a7d973f912ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundOn: 0
+  canVibrate: 0
   toggleImage: {fileID: 485735945}
   on: {fileID: 21300000, guid: d075c3e025e27ba48916737ea8cbb0a5, type: 3}
   off: {fileID: 21300000, guid: fcefc4ac3bacec6449e6595aa4c71429, type: 3}
@@ -5525,6 +5525,7 @@ MonoBehaviour:
   pawnButton: {fileID: 437883487}
   rookButton: {fileID: 1860266236}
   shopPanel: {fileID: 345727361}
+  toggle: {fileID: 485735943}
   selectedSlot: {fileID: 0}
 --- !u!4 &615245669330162425
 Transform:
