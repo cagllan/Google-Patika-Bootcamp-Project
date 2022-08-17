@@ -12,6 +12,7 @@ public class GridSystem : MonoBehaviour
     [SerializeField] Button pawnButton;
     [SerializeField] Button rookButton;
     [SerializeField] GameObject shopPanel;
+    [SerializeField] ToggleScript toggle;
 
     public Transform selectedSlot;
     private Vector3 instPos;
@@ -34,6 +35,11 @@ public class GridSystem : MonoBehaviour
             instPos = selectedSlot.position;
             StartCoroutine(SmokeParticle(instPos));
             var prefabInst = Instantiate(prefab, instPos, Quaternion.identity);
+            if (toggle.canVibrate)
+            {
+                Debug.Log("Titredi.");
+                Handheld.Vibrate();
+            }
             prefabInst.transform.parent = selectedSlot.transform;
             availableSlots.Clear();
             CoinController.Instance.DecreaseAmountOfCoin(price);
