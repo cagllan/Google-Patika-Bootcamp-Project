@@ -170,19 +170,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6447524109056323515, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
   m_PrefabInstance: {fileID: 6790374236739522667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1075902042949896553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524234364343779280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50b209b563284b7488a4ea74c60e3b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damageAmount: 10
 --- !u!114 &584818887448160128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +184,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meleeDamageParticle: {fileID: 7193358717854283945}
   _damageDealer: {fileID: 1075902042949896553}
+--- !u!114 &1075902042949896553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524234364343779280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b209b563284b7488a4ea74c60e3b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!195 &2828058568283328306 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 8719823390490615641, guid: d507be2bbd9699d45b8785c13eb1a04a, type: 3}
@@ -282,6 +282,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
