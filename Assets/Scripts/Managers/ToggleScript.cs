@@ -5,32 +5,42 @@ using UnityEngine.UI;
 
 public class ToggleScript : MonoBehaviour
 {
-    //[SerializeField] GameObject checkmark;
-    private bool soundOn;
+    public bool soundOn;
     public bool canVibrate;
 
     private int soundOnPlayerPrefs;
-    [SerializeField] Image toggleImage;
+    private int vibrationOnPlayerPrefs;
+    [SerializeField] Image audioImage;
+    [SerializeField] Image vibrationImage;
     [SerializeField] Sprite on;
     [SerializeField] Sprite off;
     void Start()
     {
         soundOnPlayerPrefs = PlayerPrefs.GetInt("SoundOn", 1);
+        vibrationOnPlayerPrefs = PlayerPrefs.GetInt("VibrationOn", 1);
+
         if (soundOnPlayerPrefs==1)
         {
-            soundOn = true;
-            canVibrate=true;
-            toggleImage.sprite = on;
-            //checkmark.SetActive(false);
+            soundOn = true;            
+            audioImage.sprite = on;                      
             AudioListener.pause = false;
         }
         else if (soundOnPlayerPrefs==0)
         {
-            soundOn = false;
-            canVibrate=false;
-            toggleImage.sprite = off;
-            //checkmark.SetActive(true);
+            soundOn = false;            
+            audioImage.sprite = off;                    
             AudioListener.pause = true;
+        }
+
+        if (vibrationOnPlayerPrefs == 1)
+        {            
+            canVibrate = true;            
+            vibrationImage.sprite = on;            
+        }
+        else if (vibrationOnPlayerPrefs == 0)
+        {            
+            canVibrate = false;            
+            vibrationImage.sprite = off;            
         }
     }
 
@@ -38,37 +48,33 @@ public class ToggleScript : MonoBehaviour
     {
         if (soundOn)
         {
-            /*if (!gameMusic.audioSource.isPlaying)
-            {
-                gameMusic.audioSource.Play();
-            }
-            else
-            {
-                gameMusic.audioSource.Stop();
-            }*/
             AudioListener.pause = true;
             soundOn = false;
-            canVibrate=false;
-            toggleImage.sprite = off;
-            //checkmark.SetActive(true);
+            audioImage.sprite = off;    
             PlayerPrefs.SetInt("SoundOn", soundOn ? 1 : 0);
         }
         else if (!soundOn)
-        {
-            /*if (!gameMusic.audioSource.isPlaying)
-            {
-                gameMusic.audioSource.Play();
-            }
-            else
-            {
-                gameMusic.audioSource.Stop();
-            }*/
+        {            
             AudioListener.pause = false;
             soundOn = true;
-            canVibrate=true;
-            toggleImage.sprite = on;
-            //checkmark.SetActive(false);
+            audioImage.sprite = on;            
             PlayerPrefs.SetInt("SoundOn", soundOn ? 1 : 0);
+        }
+    }
+
+    public void ToggleVibration()
+    {
+        if (canVibrate)
+        {
+            canVibrate = false;
+            vibrationImage.sprite = off;
+            PlayerPrefs.SetInt("VibrationOn", canVibrate ? 1 : 0);
+        }
+        else if (!canVibrate)
+        {
+            canVibrate = true;
+            vibrationImage.sprite = on;
+            PlayerPrefs.SetInt("VibrationOn", canVibrate ? 1 : 0);
         }
     }
 }
