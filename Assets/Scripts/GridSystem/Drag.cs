@@ -16,6 +16,7 @@ public class Drag : MonoBehaviour
     [SerializeField] int nearestDistanceElement;
     [SerializeField] GameObject upgradedPrefab;
     [SerializeField] Transform fightPanel;
+    [SerializeField] ParticleSystem poofParticle;
 
     private void Awake()
     {
@@ -62,6 +63,15 @@ public class Drag : MonoBehaviour
                 Destroy(gameObject);
                 var upgradedInst = Instantiate(upgradedPrefab, slots[nearestDistanceElement].transform.position, Quaternion.identity);
                 upgradedInst.transform.parent = slots[nearestDistanceElement].transform;
+                for (int i = 0; i < upgradedPrefab.transform.childCount; i++)
+                {
+                    if (upgradedInst.transform.GetChild(i).name== "CFX_MagicPoof")
+                    {
+                        poofParticle = upgradedInst.transform.GetChild(i).GetComponent<ParticleSystem>();
+                        poofParticle.Play();
+                    }
+                }
+
             }
             else
             {
@@ -70,5 +80,13 @@ public class Drag : MonoBehaviour
 
         }
 
+    }
+
+
+    IEnumerator PoofParticle(Vector3 pos)
+    {
+        var poofInst = Instantiate(poofParticle, pos, Quaternion.identity);
+        yield return new WaitForSeconds(0.75f);
+        Destroy(poofInst.gameObject);
     }
 }

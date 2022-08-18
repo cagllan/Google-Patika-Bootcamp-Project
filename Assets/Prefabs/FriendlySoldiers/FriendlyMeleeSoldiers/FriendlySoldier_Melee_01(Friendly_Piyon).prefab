@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7324296930985140941, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7324296931003492237, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -171,6 +175,7 @@ MonoBehaviour:
   nearestDistanceElement: 0
   upgradedPrefab: {fileID: 469882846879336942, guid: 648208e2993cb844c8e70894b93c2438, type: 3}
   fightPanel: {fileID: 0}
+  poofParticle: {fileID: 0}
 --- !u!114 &4477859490486424181 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4604828289428071499, guid: 2b5d839261392904a8320c96c4cbdc5d, type: 3}
