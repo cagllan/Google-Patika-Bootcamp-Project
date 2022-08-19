@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneManagerScript : MonoBehaviour
 {
     public int level;
+
+    
     void Start()
     {
+        
         level = PlayerPrefs.GetInt("LVL", 0);
         if (level < SceneManager.GetActiveScene().buildIndex)
         {
@@ -19,6 +22,8 @@ public class SceneManagerScript : MonoBehaviour
         {
             SceneManager.LoadScene(level);
         }
+
+        
     }    
 
     public void RestartLevel()

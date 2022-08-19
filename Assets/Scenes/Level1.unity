@@ -1778,6 +1778,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 847944915690044790}
+    - target: {fileID: 6685023535473344494, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965119778697, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6944890965348608659, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: slots.Array.data[0]
       value: 
@@ -1914,6 +1922,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 847944915690044788}
+    - target: {fileID: 6944890965516917736, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965586360807, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965586360807, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 152
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890966374978153, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6944890966405525666, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2010,10 +2034,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6944890966938403143, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6944890967176999285, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1857130419}
+    - target: {fileID: 8940194166750694488, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
 --- !u!114 &6944890965323676267 stripped
