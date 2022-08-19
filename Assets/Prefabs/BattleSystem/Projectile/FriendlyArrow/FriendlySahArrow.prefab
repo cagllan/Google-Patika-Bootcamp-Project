@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: _targetSoldierType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2662190130864101893, guid: 102489903862d814b9456a2aaa507628, type: 3}
+      propertyPath: _damageAmount
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 3167829757757750173, guid: 102489903862d814b9456a2aaa507628, type: 3}
       propertyPath: m_RootOrder
       value: 0

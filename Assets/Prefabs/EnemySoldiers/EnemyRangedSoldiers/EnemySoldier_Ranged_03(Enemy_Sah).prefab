@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: _soldierTargetProvider
       value: 
       objectReference: {fileID: 1446362475967328416}
+    - target: {fileID: 7982480364744038816, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
+      propertyPath: _health
+      value: 43
+      objectReference: {fileID: 0}
     - target: {fileID: 8078294618075570029, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
       propertyPath: _animator
       value: 
@@ -306,11 +310,11 @@ PrefabInstance:
     - target: {fileID: 8078294618075570029, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
       propertyPath: _bulletPrefab
       value: 
-      objectReference: {fileID: 1630460748345419032, guid: 102489903862d814b9456a2aaa507628, type: 3}
+      objectReference: {fileID: 7805332057435119033, guid: 56a63cd28712a634187feddcff7acd5d, type: 3}
     - target: {fileID: 8078294618075570029, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
       propertyPath: _arrowRefTransform
       value: 
-      objectReference: {fileID: 5838062797614007100, guid: 56a63cd28712a634187feddcff7acd5d, type: 3}
+      objectReference: {fileID: 6283924356526489662}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
 --- !u!114 &1446362475967328416 stripped

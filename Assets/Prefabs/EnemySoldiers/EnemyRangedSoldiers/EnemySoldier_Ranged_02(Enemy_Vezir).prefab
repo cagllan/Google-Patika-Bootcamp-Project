@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: _soldierTargetProvider
       value: 
       objectReference: {fileID: 1446362475967328416}
+    - target: {fileID: 7982480364744038816, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
+      propertyPath: _health
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 8078294618075570029, guid: fdcd9cb2ab9637a44a7cfb172e19b4a6, type: 3}
       propertyPath: _animator
       value: 

@@ -28,7 +28,8 @@ public class Damagable : MonoBehaviour
                 IsDead = true;                
                 
                 if(IsDead)
-                {            
+                {
+                    gameObject.GetComponent<CapsuleCollider>().enabled=false;            
                     PlayHitParticle();        
                     OnTookDamage?.Invoke(this);
                     OnDied?.Invoke(this);                    

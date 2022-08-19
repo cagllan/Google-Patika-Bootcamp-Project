@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4604828289428071499, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
+      propertyPath: _health
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5367685324060924227, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}
       propertyPath: _animator
       value: 
@@ -371,6 +375,7 @@ MonoBehaviour:
   nearestDistanceElement: 0
   upgradedPrefab: {fileID: 411036384826769213, guid: 6e6f4c0d862d4324f9ba74ba9cd8a2e0, type: 3}
   fightPanel: {fileID: 0}
+  poofParticle: {fileID: 0}
 --- !u!114 &5228650952061737390 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5367685324060924227, guid: a35f0f4102ecc7a46ae94b2c09fc61dc, type: 3}

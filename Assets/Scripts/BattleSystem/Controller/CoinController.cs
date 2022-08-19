@@ -19,6 +19,7 @@ public class CoinController : MonoBehaviour
     }
 
     [SerializeField] private TMP_Text _coinAmountText = null;
+    [SerializeField] private TMP_Text _coinAmountText2 = null;
     [SerializeField] private int _baseCoinAmount;
     [SerializeField] private int _enemyWinCoinAmount;
     [SerializeField] private int _friendlyWinCoinAmount;
@@ -39,10 +40,12 @@ public class CoinController : MonoBehaviour
         {
             PlayerPrefs.SetInt(_coinKey, _baseCoinAmount);
             _coinAmountText.text = PlayerPrefs.GetInt(_coinKey).ToString();
+            _coinAmountText2.text = PlayerPrefs.GetInt(_coinKey).ToString();
         }
         else
         {
             _coinAmountText.text = GetCoinAmount().ToString();
+            _coinAmountText2.text = GetCoinAmount().ToString();
         }
 
         GetEnemyWinCoinAmountAsAString();
@@ -83,6 +86,7 @@ public class CoinController : MonoBehaviour
     {
         int coinAmount = PlayerPrefs.GetInt(_coinKey) + increaseAmount;
         _coinAmountText.text = coinAmount.ToString();
+        _coinAmountText2.text = coinAmount.ToString();
         SetCoinAmount(coinAmount);
     }
 
@@ -94,12 +98,14 @@ public class CoinController : MonoBehaviour
         {
             coinAmount = 0;
             _coinAmountText.text = coinAmount.ToString();
+            _coinAmountText2.text = coinAmount.ToString();
             SetCoinAmount(coinAmount);
-            Debug.Log("Satın alamazsın. - " + PlayerPrefs.GetInt(_coinKey));
+            //Debug.Log("Satın alamazsın. - " + PlayerPrefs.GetInt(_coinKey));
             return;
         }
         
          _coinAmountText.text = coinAmount.ToString();
+         _coinAmountText2.text = coinAmount.ToString();
         SetCoinAmount(coinAmount);
     }
 

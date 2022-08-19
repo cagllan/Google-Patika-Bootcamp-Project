@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 4685269941396471506}
+    - target: {fileID: 1560149324980072667, guid: 64ab826517802de4da7b05dc11d8e08c, type: 3}
+      propertyPath: _health
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2100929339739366183, guid: 64ab826517802de4da7b05dc11d8e08c, type: 3}
       propertyPath: _animator
       value: 
@@ -226,6 +230,10 @@ PrefabInstance:
     - target: {fileID: 7290760851850755592, guid: 64ab826517802de4da7b05dc11d8e08c, type: 3}
       propertyPath: _animator
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552992037617511026, guid: 64ab826517802de4da7b05dc11d8e08c, type: 3}
+      propertyPath: _damageAmount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8229046619581247545, guid: 64ab826517802de4da7b05dc11d8e08c, type: 3}
       propertyPath: _animator

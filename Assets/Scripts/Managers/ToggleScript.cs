@@ -14,7 +14,7 @@ public class ToggleScript : MonoBehaviour
     [SerializeField] Image vibrationImage;
     [SerializeField] Sprite on;
     [SerializeField] Sprite off;
-    void Start()
+    void Awake()
     {
         soundOnPlayerPrefs = PlayerPrefs.GetInt("SoundOn", 1);
         vibrationOnPlayerPrefs = PlayerPrefs.GetInt("VibrationOn", 1);
