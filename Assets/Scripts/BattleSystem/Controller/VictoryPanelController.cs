@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class VictoryPanelController : MonoBehaviour
 {
-    [SerializeField] private GameObject _winPanel = null;
-    [SerializeField] private GameObject _losePanel = null;
+    //[SerializeField] private GameObject _winPanel = null;
+    //[SerializeField] private GameObject _losePanel = null;
+    public Animator canvasAnim;
 
     private IEnumerator _winPanelRoutine;
     private IEnumerator _losePanelRoutine;
@@ -37,12 +38,14 @@ public class VictoryPanelController : MonoBehaviour
 
     private void WinPanelVisibility()
     {
-        _winPanel.SetActive(true);
+        //_winPanel.SetActive(true);
+        canvasAnim.SetBool("didWin",true);
     }
 
     private void LosePanelVisibility()
     {
-        _losePanel.SetActive(true);
+        //_losePanel.SetActive(true);
+        canvasAnim.SetBool("didLose",true);
     }
 
 

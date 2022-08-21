@@ -35,4 +35,9 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void RestartGame(){
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
 }

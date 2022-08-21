@@ -11,6 +11,9 @@ TagManager:
   - Rook
   - Queen
   - King
+  - FxTemporaire
+  - FormationManager
+  - Zemin
   layers:
   - Default
   - TransparentFX

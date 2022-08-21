@@ -36,6 +36,13 @@ public class GridSystem : MonoBehaviour
             instPos = selectedSlot.position;
             StartCoroutine(SmokeParticle(instPos));
             var prefabInst = Instantiate(prefab, instPos, Quaternion.identity);
+            for (int child = 0; child < prefabInst.transform.childCount; child++)
+            {
+                if (prefabInst.transform.GetChild(child).name=="poof")
+                {
+                    prefabInst.transform.GetChild(child).GetComponent<AudioSource>().Play();
+                }
+            }
             if (canVibrate)
             {
                 Handheld.Vibrate();

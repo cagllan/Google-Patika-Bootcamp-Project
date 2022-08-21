@@ -36,7 +36,7 @@ public class Projectile : MonoBehaviour
 
     private IEnumerator DestroyMeProgress()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
 

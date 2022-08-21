@@ -17,9 +17,12 @@ public class Drag : MonoBehaviour
     [SerializeField] GameObject upgradedPrefab;
     [SerializeField] Transform fightPanel;
     [SerializeField] ParticleSystem poofParticle;
+    [SerializeField] ToggleScript toggle;
+    [SerializeField] AudioSource poof;
 
     private void Awake()
     {
+        toggle=GameObject.FindGameObjectWithTag("Zemin").GetComponent<ToggleScript>();
         slots = GameObject.FindGameObjectsWithTag("Slot");
         fightPanel = GameObject.Find("Canvas").transform.GetChild(0);
     }
@@ -67,10 +70,18 @@ public class Drag : MonoBehaviour
                 {
                     if (upgradedInst.transform.GetChild(i).name== "CFX_MagicPoof")
                     {
+                        upgradedInst.transform.GetChild(i).GetComponent<AudioSource>().Play();
                         poofParticle = upgradedInst.transform.GetChild(i).GetComponent<ParticleSystem>();
                         poofParticle.Play();
+                        
                     }
                 }
+                if (toggle.canVibrate)
+                    {
+                Handheld.Vibrate();
+                }
+          
+
 
             }
             else

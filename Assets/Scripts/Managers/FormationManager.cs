@@ -18,6 +18,7 @@ public class FormationManager : MonoBehaviour
     [SerializeField] GameObject queenPrefab;
     [SerializeField] GameObject kingPrefab;
     public SceneManagerScript sceneManager;
+    private GameObject[] formationManagers;
 
 
 
@@ -53,6 +54,11 @@ public class FormationManager : MonoBehaviour
 
     public void LoadFormation(Scene scene, LoadSceneMode mode)
     {
+        formationManagers = GameObject.FindGameObjectsWithTag("FormationManager");
+        for (int f = formationManagers.Length - 1; f >0 ; f--)
+        {
+            Destroy(formationManagers[f]);
+        }
         slots = GameObject.FindGameObjectsWithTag("Slot");
 
         foreach (var slot in slots)
