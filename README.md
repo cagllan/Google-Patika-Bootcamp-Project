@@ -7,7 +7,7 @@ Google Casual Game Development & Game Art Bootcamp kapsamında Unity3D oyun moto
 #### Developer
 
 - Arda Özkardeşler - [Github](https://github.com/ArdaOzkardesler) | [LinkedIn](https://www.linkedin.com/in/ardaozkardesler/)
-- Berkay Ersever - [Github](https://github.com/berkayersever)| [LinkedIn](https://www.linkedin.com/in/berkayersever/)
+- Berkay Ersever - [Github](https://github.com/berkayersever) | [LinkedIn](https://www.linkedin.com/in/berkayersever/)
 - Çağlan Atay - [Github](https://github.com/cagllan) | [LinkedIn](https://www.linkedin.com/in/caglanatay/)
 - Furkan Polat - [Github](https://github.com/polat58furkan) | [LinkedIn](https://www.linkedin.com/in/polat58furkan/)
 
