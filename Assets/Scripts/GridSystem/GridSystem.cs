@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class GridSystem : MonoBehaviour
     [SerializeField] Button rookButton;
     [SerializeField] GameObject shopPanel;
     [SerializeField] ToggleScript toggle;
+    [SerializeField] TMP_Text pawnPrice;
+    [SerializeField] TMP_Text rookPrice;
     private bool canVibrate;
 
     public Transform selectedSlot;
@@ -70,6 +73,8 @@ public class GridSystem : MonoBehaviour
             {
                 pawnButton.interactable = false;
                 rookButton.interactable = false;
+                pawnPrice.alpha = 0.5f;
+                rookPrice.alpha = 0.5f;
             }
         }
     }

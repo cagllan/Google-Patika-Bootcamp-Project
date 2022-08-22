@@ -1124,6 +1124,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247306917}
   m_Mesh: {fileID: -745928167409971724, guid: 8b93970b2958cf44f86bf296107cbda3, type: 3}
+--- !u!114 &251405844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1817792227317423399, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+  m_PrefabInstance: {fileID: 6944890965323676265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &251405845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5488258956780155889, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+  m_PrefabInstance: {fileID: 6944890965323676265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &267516287
 GameObject:
   m_ObjectHideFlags: 0
@@ -6797,6 +6819,8 @@ MonoBehaviour:
   rookButton: {fileID: 1860266236}
   shopPanel: {fileID: 345727361}
   toggle: {fileID: 1413501736}
+  pawnPrice: {fileID: 251405845}
+  rookPrice: {fileID: 251405844}
   selectedSlot: {fileID: 0}
 --- !u!4 &1413501735
 Transform:
@@ -10941,9 +10965,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 92b8ed648c935be4883736587f0ad3f6, type: 3}
+    - target: {fileID: 4477536206634485179, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882082434824907937, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6685023535473344494, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965119778697, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_IsActive
@@ -11287,7 +11319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966374978153, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966405525666, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
