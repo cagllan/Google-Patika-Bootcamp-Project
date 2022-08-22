@@ -20,6 +20,7 @@ Google Casual Game Development & Game Art Bootcamp kapsamında Unity3D oyun moto
 ## Oyun İçeriği
 
 Oyun, dost ve düşman birliklerin yer aldığı 8x8 bir grid üzerinde oynanmaktadır. Oyuncu, mağazadan piyon (melee) ve kale (ranged) birlikleri satın alabilir. Satın alınan birlikler, grid üzerinde oyuncu için ayrılan 32 slottan birinde random şekilde belirir. Oyuncu, satın aldığı birlikleri merge ederek daha güçlü taşlar elde edebilir. Taşlar sürüklenip bırakılarak farklı slotlara yerleştirilebilir ve savaş formasyonları yaratılabilir. Dost ve düşman birlikler belirli kurallar çerçevesinde savaşır ve savaş sonucuna göre aynı level tekrar edilir veya farklı bir düşman formasyonu içeren sonraki levela geçilir. Oyuncu savaşın kazanılma/kaybedilme durumuna bağlı olarak farklı miktarlarda coin elde eder.
+
 ![Gameplay](https://i.ibb.co/dc09pfV/gameplay.gif)
 ![Gameplay2](https://i.ibb.co/6s93qgF/gameplay2.gif)
 
