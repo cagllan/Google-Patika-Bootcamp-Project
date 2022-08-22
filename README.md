@@ -39,7 +39,7 @@ Not: Oyun Unity3D 2021.3.7f1 sürümü ile geliştirilmiştir.
 
 ## Oynanış Videosu
 
-[Demo Playthrough]()
+[Demo Playthrough](https://youtu.be/E8ucm8MNWpw)
 
 ## Behance Link
 
