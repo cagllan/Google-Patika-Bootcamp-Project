@@ -1981,7 +1981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2107990228954519271, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 50331647
       objectReference: {fileID: 0}
     - target: {fileID: 4419532601697220830, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor.a
@@ -1989,7 +1989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419532601697220830, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4425290475132179957, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2081,7 +2081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965206942580, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965215939072, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_Color.a
@@ -2383,13 +2383,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: AnimationManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6944890965586360825, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6944890965591496080, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965591496080, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 50331647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965788941472, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965788941473, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2505,7 +2513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966273597335, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 50331647
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966357758633, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_IsActive
@@ -2569,7 +2577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966442086565, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966651559117, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_Color.a

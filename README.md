@@ -1,6 +1,6 @@
 # Patika.dev & Google Bootcamp Bitirme Projesi
 
-Google Casual Game Development & Game Art Bootcamp kapsamında Unity3D oyun motoru kullanılarak geliştirilmiştir.
+Google Casual Game Development & Game Art Bootcamp kapsamında Unity3D oyun motoru kullanılarak geliştirilmiştir. Merge Chess, merge mekaniği ve saldırı formasyonu belirleme üzerine kurulu, Hybrid-Casual bir oyundur.
 
 ## Takım Üyeleri
 
@@ -17,13 +17,9 @@ Google Casual Game Development & Game Art Bootcamp kapsamında Unity3D oyun moto
 - Nilay Barboros - [Behance]() | [LinkedIn](https://www.linkedin.com/in/nilay-barboros/)
 - Semanur Özcan - [Behance](https://www.behance.net/semanurzcan1) | [LinkedIn]()
 
-## Oyun Açıklaması
+## Oyun İçeriği
 
-Merge Chess, grid ve merge sistemi kullanılan, karakter satın alma ile bu satın alınan aynı türde karakterleri merge ederek yeni karakterler oluşturabildiğimiz, bunları karşı takımla savaştırarak level atladığımız Hybrid-Casual türünde bir oyundur.
-
-## Oyun Oynanışı
-
-Oyunda shop kısmından karakter alınıyor ve aynı iki karakter savaştan önceki ekranda merge edilerek yeni bir üst seviye karakter oluşturulabiliyor. Karakterleri kendi bölgemizde farklı gridlere sürükleyip bırakarak savaştan önce farklı savaş kombinasyonları yaratabiliyoruz. Fight butonuna bastığımızda karşı takım ile bizim karakterlerimiz arasında savaş başlıyor. Bu savaş sonucuna göre coin kazanıyoruz, eğer kaybedersek aynı leveli oynuyoruz, kazanırsak da bir sonraki levele geçebiliyoruz.
+Oyun, dost ve düşman birliklerin yer aldığı 8x8 bir grid üzerinde oynanmaktadır. Oyuncu, mağazadan piyon(melee) ve kale(ranged) birlikleri satın alabilir. Satın alınan birlikler, grid üzerinde oyuncu için ayrılan 32 slottan birinde random şekilde belirir. Oyuncu, satın aldığı birlikleri merge ederek daha güçlü taşlar elde edebilir. Taşlar sürüklenip bırakılarak farklı slotlara yerleştirilebilir ve savaş formasyonları yaratılabilir. Dost ve düşman birlikler belirli kurallar çerçevesinde savaşır ve savaş sonucuna göre aynı level tekrar edilir veya farklı bir düşman formasyonu içeren sonraki levela geçilir. Oyuncu savaşın kazanılma/kaybedilme durumuna bağlı olarak farklı miktarlarda coin elde eder.
 
 ## Proje Kurulumu
 

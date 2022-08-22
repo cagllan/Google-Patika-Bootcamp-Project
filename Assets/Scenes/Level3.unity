@@ -1714,6 +1714,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 279f39dfe69e7ee4fb6cfef101d96df0, type: 3}
+    - target: {fileID: 4419532601697220830, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 4477536206634485179, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 80
@@ -1745,6 +1749,10 @@ PrefabInstance:
     - target: {fileID: 6944890965180680066, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965206942580, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965348608659, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: slots.Array.data[0]
@@ -2024,11 +2032,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965586360807, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 203
+      value: 212
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965586360807, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 152
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890965788941472, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944890965788941473, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2113,6 +2125,10 @@ PrefabInstance:
     - target: {fileID: 6944890966405525666, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944890966442086565, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6944890966679447687, guid: 25f9b2e08c87f4643a779f712293333c, type: 3}
       propertyPath: m_text
