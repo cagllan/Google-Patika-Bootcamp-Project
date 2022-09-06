@@ -28,7 +28,7 @@ Oyun, dost ve düşman birliklerin yer aldığı 8x8 bir grid üzerinde oynanmak
 
 ## Proje Kurulumu
 
-Projeyi `git clone https://github.com/ArdaOzkardesler/Google-Patika-Bootcamp-Project` komutunu kullanarak indirebilirsiniz.
+Projeyi `git clone https://github.com/cagllan/Google-Patika-Bootcamp-Project` komutunu kullanarak indirebilirsiniz.
 İndirme işleminden sonra, projeyi Unity oyun motorunda açabilir ve çalıştırabilirsiniz.
 
 Not: Oyun Unity3D 2021.3.7f1 sürümü ile geliştirilmiştir.
